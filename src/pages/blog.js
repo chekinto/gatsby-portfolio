@@ -6,11 +6,11 @@ import Layout from "../components/Layout"
 export default () => (
   <>
     <Helmet>
-      <title>Welcome | Homepage</title>
+      <title>Blog | Portfolio</title>
     </Helmet>
     <GlobalStyles />
     <Layout>
-      <h1>Hello Starter</h1>
+      <h1>Hello From Blog page</h1>
     </Layout>
   </>
 )
