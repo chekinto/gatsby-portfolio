@@ -1,10 +1,16 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
+import BurgerMenu from "../BurgerMenu"
 
 const HeaderContainer = styled.header`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   width: 100%;
-  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.3);
+  background: transparent;
+  z-index: 1000;
 `
 
 const HeaderInner = styled.div`
@@ -21,11 +27,14 @@ const HeaderInner = styled.div`
 const NavLeft = styled.div``
 
 const NavRight = styled.nav`
+  @media (max-width: 767px) {
+    display: none;
+  }
   .nav__link {
-    text-decoration: none;
     margin-left: 16px;
   }
   .nav__link-active {
+    color: red;
   }
 `
 
@@ -58,6 +67,7 @@ const Header = () => (
           Contact
         </Link>
       </NavRight>
+      <BurgerMenu />
     </HeaderInner>
   </HeaderContainer>
 )
